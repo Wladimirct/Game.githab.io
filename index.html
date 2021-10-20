@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1920 height=1080></canvas>
+      <canvas id="unity-canvas" width=640 height=480></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -27,11 +27,11 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/123.loader.js";
+      var loaderUrl = buildUrl + "/Memory.loader.js";
       var config = {
-        dataUrl: buildUrl + "/123.data.gz",
-        frameworkUrl: buildUrl + "/123.framework.js.gz",
-        codeUrl: buildUrl + "/123.wasm.gz",
+        dataUrl: buildUrl + "/Memory.data.unityweb",
+        frameworkUrl: buildUrl + "/Memory.framework.js.unityweb",
+        codeUrl: buildUrl + "/Memory.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Igra",
@@ -62,8 +62,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "1920px";
-        canvas.style.height = "1080px";
+        canvas.style.width = "640px";
+        canvas.style.height = "480px";
       }
       loadingBar.style.display = "block";
 
